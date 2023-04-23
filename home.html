@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Upload Image</title>
+    <style>
+      body {
+        background-color: #f2f2f2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        flex-flow: column;
+      }
+      
+      .card {
+        background-color: #82d7ee;
+        border: 1px solid #ccc;
+        border-radius: 50%;
+        padding: 50px;
+        text-align: center;
+      }
+      .card:hover{    
+        box-shadow: 26px 22px 34px 0px brown;
+      }
+
+
+
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      input[type="file"] {
+        display: block;
+        margin-bottom: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+
+      input[type="file"]:hover {
+        border-color: #4CAF50;
+      }
+
+      button[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+
+      button[type="submit"]:hover {
+        background-color: #69e26f;
+      }
+      .container{
+        position: fixed;
+        top: 50px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Welcome To Image Uploader</h1>
+    </div>
+    <div class="card">
+      <h1>Upload Image</h1>
+      <form action="/upload" method="post" enctype="multipart/form-data">
+        <label for="image">Choose an image to upload:</label>
+        <input type="file" name="image" id="image" />
+        <button type="submit">Upload</button>
+      </form>
+    </div>
+  </body>
+</html>
